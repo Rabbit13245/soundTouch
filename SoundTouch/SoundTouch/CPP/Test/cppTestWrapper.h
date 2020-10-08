@@ -7,6 +7,9 @@
 
 -(void) hello_world_cpp_wrapper;
 -(int) sum_cpp_wrapper: (NSUInteger) a : (NSUInteger) b;
+-(void) write_file_wrapper;
+-(void) read_file_wrapper;
+-(void) testLaunch_wrapper;
 
 @end
 

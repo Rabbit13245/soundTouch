@@ -8,19 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		84509FA7252EF95100045959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84509FA6252EF95100045959 /* AppDelegate.swift */; };
-		84509FA9252EF95100045959 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84509FA8252EF95100045959 /* SceneDelegate.swift */; };
 		84509FAB252EF95100045959 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84509FAA252EF95100045959 /* ViewController.swift */; };
 		84509FAE252EF95100045959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84509FAC252EF95100045959 /* Main.storyboard */; };
 		84509FB0252EF95200045959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84509FAF252EF95200045959 /* Assets.xcassets */; };
 		84509FB3252EF95200045959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84509FB1252EF95200045959 /* LaunchScreen.storyboard */; };
 		84509FBD252F17D400045959 /* cppTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FBB252F17D400045959 /* cppTest.cpp */; };
 		84509FBF252F18FC00045959 /* cppTestWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84509FBE252F18FC00045959 /* cppTestWrapper.mm */; };
+		84509FDE252F2B3C00045959 /* InterpolateCubic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FC4252F2B3900045959 /* InterpolateCubic.cpp */; };
+		84509FDF252F2B3C00045959 /* mmx_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FC6252F2B3900045959 /* mmx_optimized.cpp */; };
+		84509FE0252F2B3C00045959 /* SoundTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FC7252F2B3900045959 /* SoundTouch.cpp */; };
+		84509FE1252F2B3C00045959 /* RateTransposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FC8252F2B3900045959 /* RateTransposer.cpp */; };
+		84509FE2252F2B3C00045959 /* sse_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FCA252F2B3A00045959 /* sse_optimized.cpp */; };
+		84509FE3252F2B3C00045959 /* InterpolateLinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FCB252F2B3A00045959 /* InterpolateLinear.cpp */; };
+		84509FE4252F2B3C00045959 /* AAFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FCD252F2B3A00045959 /* AAFilter.cpp */; };
+		84509FE6252F2B3C00045959 /* InterpolateShannon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FCF252F2B3A00045959 /* InterpolateShannon.cpp */; };
+		84509FE7252F2B3C00045959 /* BPMDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FD0252F2B3A00045959 /* BPMDetect.cpp */; };
+		84509FE9252F2B3C00045959 /* TDStretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FD2252F2B3A00045959 /* TDStretch.cpp */; };
+		84509FEA252F2B3C00045959 /* cpu_detect_x86.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FD6252F2B3B00045959 /* cpu_detect_x86.cpp */; };
+		84509FEC252F2B3C00045959 /* PeakFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDB252F2B3B00045959 /* PeakFinder.cpp */; };
+		84509FED252F2B3C00045959 /* FIFOSampleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDC252F2B3B00045959 /* FIFOSampleBuffer.cpp */; };
+		84509FEE252F2B3C00045959 /* FIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDD252F2B3B00045959 /* FIRFilter.cpp */; };
+		84509FFA252F2BA100045959 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF3252F2BA000045959 /* main.cpp */; };
+		84509FFB252F2BA100045959 /* RunParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF4252F2BA000045959 /* RunParameters.cpp */; };
+		84509FFD252F2BA100045959 /* WavFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF6252F2BA100045959 /* WavFile.cpp */; };
+		8450A006252F2CB700045959 /* soundtouch_config.h.in in Resources */ = {isa = PBXBuildFile; fileRef = 84509FFF252F2CB700045959 /* soundtouch_config.h.in */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84509FA3252EF95100045959 /* SoundTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84509FA6252EF95100045959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84509FA8252EF95100045959 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84509FAA252EF95100045959 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84509FAD252EF95100045959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84509FAF252EF95200045959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +47,40 @@
 		84509FBC252F17D400045959 /* cppTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cppTest.hpp; sourceTree = "<group>"; };
 		84509FBE252F18FC00045959 /* cppTestWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = cppTestWrapper.mm; sourceTree = "<group>"; };
 		84509FC0252F193A00045959 /* cppTestWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cppTestWrapper.h; sourceTree = "<group>"; };
+		84509FC4252F2B3900045959 /* InterpolateCubic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateCubic.cpp; sourceTree = "<group>"; };
+		84509FC5252F2B3900045959 /* InterpolateLinear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateLinear.h; sourceTree = "<group>"; };
+		84509FC6252F2B3900045959 /* mmx_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mmx_optimized.cpp; sourceTree = "<group>"; };
+		84509FC7252F2B3900045959 /* SoundTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundTouch.cpp; sourceTree = "<group>"; };
+		84509FC8252F2B3900045959 /* RateTransposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RateTransposer.cpp; sourceTree = "<group>"; };
+		84509FC9252F2B3A00045959 /* PeakFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakFinder.h; sourceTree = "<group>"; };
+		84509FCA252F2B3A00045959 /* sse_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sse_optimized.cpp; sourceTree = "<group>"; };
+		84509FCB252F2B3A00045959 /* InterpolateLinear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateLinear.cpp; sourceTree = "<group>"; };
+		84509FCC252F2B3A00045959 /* InterpolateCubic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateCubic.h; sourceTree = "<group>"; };
+		84509FCD252F2B3A00045959 /* AAFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAFilter.cpp; sourceTree = "<group>"; };
+		84509FCF252F2B3A00045959 /* InterpolateShannon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolateShannon.cpp; sourceTree = "<group>"; };
+		84509FD0252F2B3A00045959 /* BPMDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPMDetect.cpp; sourceTree = "<group>"; };
+		84509FD2252F2B3A00045959 /* TDStretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TDStretch.cpp; sourceTree = "<group>"; };
+		84509FD3252F2B3A00045959 /* TDStretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStretch.h; sourceTree = "<group>"; };
+		84509FD4252F2B3A00045959 /* cpu_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_detect.h; sourceTree = "<group>"; };
+		84509FD5252F2B3B00045959 /* InterpolateShannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolateShannon.h; sourceTree = "<group>"; };
+		84509FD6252F2B3B00045959 /* cpu_detect_x86.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu_detect_x86.cpp; sourceTree = "<group>"; };
+		84509FD8252F2B3B00045959 /* RateTransposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateTransposer.h; sourceTree = "<group>"; };
+		84509FD9252F2B3B00045959 /* FIRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFilter.h; sourceTree = "<group>"; };
+		84509FDA252F2B3B00045959 /* AAFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAFilter.h; sourceTree = "<group>"; };
+		84509FDB252F2B3B00045959 /* PeakFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PeakFinder.cpp; sourceTree = "<group>"; };
+		84509FDC252F2B3B00045959 /* FIFOSampleBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIFOSampleBuffer.cpp; sourceTree = "<group>"; };
+		84509FDD252F2B3B00045959 /* FIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIRFilter.cpp; sourceTree = "<group>"; };
+		84509FF2252F2BA000045959 /* RunParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunParameters.h; sourceTree = "<group>"; };
+		84509FF3252F2BA000045959 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		84509FF4252F2BA000045959 /* RunParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RunParameters.cpp; sourceTree = "<group>"; };
+		84509FF6252F2BA100045959 /* WavFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WavFile.cpp; sourceTree = "<group>"; };
+		84509FF7252F2BA100045959 /* WavFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavFile.h; sourceTree = "<group>"; };
+		84509FFF252F2CB700045959 /* soundtouch_config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = soundtouch_config.h.in; sourceTree = "<group>"; };
+		8450A000252F2CB700045959 /* SoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTouch.h; sourceTree = "<group>"; };
+		8450A001252F2CB700045959 /* FIFOSampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSampleBuffer.h; sourceTree = "<group>"; };
+		8450A002252F2CB700045959 /* STTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTypes.h; sourceTree = "<group>"; };
+		8450A003252F2CB700045959 /* BPMDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMDetect.h; sourceTree = "<group>"; };
+		8450A005252F2CB700045959 /* FIFOSamplePipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSamplePipe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,20 +113,93 @@
 		84509FA5252EF95100045959 /* SoundTouch */ = {
 			isa = PBXGroup;
 			children = (
+				84509FC1252F2AE800045959 /* CPP */,
 				84509FA6252EF95100045959 /* AppDelegate.swift */,
-				84509FA8252EF95100045959 /* SceneDelegate.swift */,
 				84509FAA252EF95100045959 /* ViewController.swift */,
 				84509FAC252EF95100045959 /* Main.storyboard */,
 				84509FAF252EF95200045959 /* Assets.xcassets */,
 				84509FB1252EF95200045959 /* LaunchScreen.storyboard */,
 				84509FB4252EF95200045959 /* Info.plist */,
+				84509FBA252F17D400045959 /* SoundTouch-Bridging-Header.h */,
+			);
+			path = SoundTouch;
+			sourceTree = "<group>";
+		};
+		84509FC1252F2AE800045959 /* CPP */ = {
+			isa = PBXGroup;
+			children = (
+				84509FFE252F2CA100045959 /* include */,
+				84509FEF252F2B7B00045959 /* SoundStretchPort */,
+				84509FC3252F2B0D00045959 /* SoundTouchLib */,
+				84509FC2252F2AF600045959 /* Test */,
+			);
+			path = CPP;
+			sourceTree = "<group>";
+		};
+		84509FC2252F2AF600045959 /* Test */ = {
+			isa = PBXGroup;
+			children = (
 				84509FBB252F17D400045959 /* cppTest.cpp */,
 				84509FBC252F17D400045959 /* cppTest.hpp */,
-				84509FBA252F17D400045959 /* SoundTouch-Bridging-Header.h */,
 				84509FBE252F18FC00045959 /* cppTestWrapper.mm */,
 				84509FC0252F193A00045959 /* cppTestWrapper.h */,
 			);
-			path = SoundTouch;
+			path = Test;
+			sourceTree = "<group>";
+		};
+		84509FC3252F2B0D00045959 /* SoundTouchLib */ = {
+			isa = PBXGroup;
+			children = (
+				84509FCD252F2B3A00045959 /* AAFilter.cpp */,
+				84509FDA252F2B3B00045959 /* AAFilter.h */,
+				84509FD0252F2B3A00045959 /* BPMDetect.cpp */,
+				84509FD6252F2B3B00045959 /* cpu_detect_x86.cpp */,
+				84509FD4252F2B3A00045959 /* cpu_detect.h */,
+				84509FDC252F2B3B00045959 /* FIFOSampleBuffer.cpp */,
+				84509FDD252F2B3B00045959 /* FIRFilter.cpp */,
+				84509FD9252F2B3B00045959 /* FIRFilter.h */,
+				84509FC4252F2B3900045959 /* InterpolateCubic.cpp */,
+				84509FCC252F2B3A00045959 /* InterpolateCubic.h */,
+				84509FCB252F2B3A00045959 /* InterpolateLinear.cpp */,
+				84509FC5252F2B3900045959 /* InterpolateLinear.h */,
+				84509FCF252F2B3A00045959 /* InterpolateShannon.cpp */,
+				84509FD5252F2B3B00045959 /* InterpolateShannon.h */,
+				84509FC6252F2B3900045959 /* mmx_optimized.cpp */,
+				84509FDB252F2B3B00045959 /* PeakFinder.cpp */,
+				84509FC9252F2B3A00045959 /* PeakFinder.h */,
+				84509FC8252F2B3900045959 /* RateTransposer.cpp */,
+				84509FD8252F2B3B00045959 /* RateTransposer.h */,
+				84509FC7252F2B3900045959 /* SoundTouch.cpp */,
+				84509FCA252F2B3A00045959 /* sse_optimized.cpp */,
+				84509FD2252F2B3A00045959 /* TDStretch.cpp */,
+				84509FD3252F2B3A00045959 /* TDStretch.h */,
+			);
+			path = SoundTouchLib;
+			sourceTree = "<group>";
+		};
+		84509FEF252F2B7B00045959 /* SoundStretchPort */ = {
+			isa = PBXGroup;
+			children = (
+				84509FF3252F2BA000045959 /* main.cpp */,
+				84509FF4252F2BA000045959 /* RunParameters.cpp */,
+				84509FF2252F2BA000045959 /* RunParameters.h */,
+				84509FF6252F2BA100045959 /* WavFile.cpp */,
+				84509FF7252F2BA100045959 /* WavFile.h */,
+			);
+			path = SoundStretchPort;
+			sourceTree = "<group>";
+		};
+		84509FFE252F2CA100045959 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8450A003252F2CB700045959 /* BPMDetect.h */,
+				8450A001252F2CB700045959 /* FIFOSampleBuffer.h */,
+				8450A005252F2CB700045959 /* FIFOSamplePipe.h */,
+				84509FFF252F2CB700045959 /* soundtouch_config.h.in */,
+				8450A000252F2CB700045959 /* SoundTouch.h */,
+				8450A002252F2CB700045959 /* STTypes.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +263,7 @@
 			files = (
 				84509FB3252EF95200045959 /* LaunchScreen.storyboard in Resources */,
 				84509FB0252EF95200045959 /* Assets.xcassets in Resources */,
+				8450A006252F2CB700045959 /* soundtouch_config.h.in in Resources */,
 				84509FAE252EF95100045959 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,11 +275,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84509FFB252F2BA100045959 /* RunParameters.cpp in Sources */,
 				84509FBD252F17D400045959 /* cppTest.cpp in Sources */,
 				84509FAB252EF95100045959 /* ViewController.swift in Sources */,
+				84509FE9252F2B3C00045959 /* TDStretch.cpp in Sources */,
+				84509FDE252F2B3C00045959 /* InterpolateCubic.cpp in Sources */,
+				84509FE2252F2B3C00045959 /* sse_optimized.cpp in Sources */,
+				84509FFD252F2BA100045959 /* WavFile.cpp in Sources */,
+				84509FE0252F2B3C00045959 /* SoundTouch.cpp in Sources */,
+				84509FDF252F2B3C00045959 /* mmx_optimized.cpp in Sources */,
+				84509FED252F2B3C00045959 /* FIFOSampleBuffer.cpp in Sources */,
+				84509FE7252F2B3C00045959 /* BPMDetect.cpp in Sources */,
+				84509FEA252F2B3C00045959 /* cpu_detect_x86.cpp in Sources */,
 				84509FA7252EF95100045959 /* AppDelegate.swift in Sources */,
+				84509FE3252F2B3C00045959 /* InterpolateLinear.cpp in Sources */,
+				84509FEC252F2B3C00045959 /* PeakFinder.cpp in Sources */,
 				84509FBF252F18FC00045959 /* cppTestWrapper.mm in Sources */,
-				84509FA9252EF95100045959 /* SceneDelegate.swift in Sources */,
+				84509FE4252F2B3C00045959 /* AAFilter.cpp in Sources */,
+				84509FEE252F2B3C00045959 /* FIRFilter.cpp in Sources */,
+				84509FE1252F2B3C00045959 /* RateTransposer.cpp in Sources */,
+				84509FE6252F2B3C00045959 /* InterpolateShannon.cpp in Sources */,
+				84509FFA252F2BA100045959 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = URTF63URRB;
 				INFOPLIST_FILE = SoundTouch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = URTF63URRB;
 				INFOPLIST_FILE = SoundTouch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

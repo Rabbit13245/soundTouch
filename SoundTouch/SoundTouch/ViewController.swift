@@ -5,6 +5,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var recordAudio: UIButton!
     @IBOutlet weak var playAudio: UIButton!
+    @IBOutlet weak var playModifyButton: UIButton!
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
@@ -52,15 +53,16 @@ class ViewController: UIViewController {
         recordAudio.isEnabled = true
         recordAudio.addTarget(self, action: #selector(recordAudioButtonTapped), for: .touchUpInside)
         playAudio.addTarget(self, action: #selector(playAudioButtonTapped), for: .touchUpInside)
+        playModifyButton.addTarget(self, action: #selector(playAudioModifyButtonTapped), for: .touchUpInside)
     }
     
     private func startRecording(){
         self.view.backgroundColor = UIColor(red: 0.5, green: 0, blue: 0, alpha: 1)
         recordAudio.setTitle("Tap to stop", for: .normal)
         
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("record.m4a")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("input.wav")
         let audioSettings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVFormatIDKey: Int(kAudioFormatLinearPCM),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue,
@@ -113,17 +115,19 @@ class ViewController: UIViewController {
     }
     
     @objc private func playAudioButtonTapped(){
-        if (playAudio.titleLabel?.text == "Play audio"){
+        if (playAudio.titleLabel?.text == "Play origin"){
             do{
-                playAudio.setTitle("Stop audio", for: .normal)
+                playAudio.setTitle("Stop origin", for: .normal)
                 recordAudio.isEnabled = false
-                audioPlayer = try AVAudioPlayer(contentsOf: getDocumentsDirectory().appendingPathComponent("record.m4a"))
+                playModifyButton.isEnabled = false
+                audioPlayer = try AVAudioPlayer(contentsOf: getDocumentsDirectory().appendingPathComponent("input.wav"))
                 audioPlayer.play()
                 audioPlayer.volume = 10.0
                 audioPlayer.delegate = self
             }
             catch{
                 recordAudio.isEnabled = true
+                playModifyButton.isEnabled = true
                 let ac = UIAlertController(title: "Playback failed", message: "There was a problem; please try re-recording.", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default))
                 present(ac, animated: true)
@@ -131,14 +135,50 @@ class ViewController: UIViewController {
         }
         else{
             audioPlayer.stop()
-            playAudio.setTitle("Play audio", for: .normal)
+            playAudio.setTitle("Play origin", for: .normal)
             recordAudio.isEnabled = true
+            playModifyButton.isEnabled = true
+        }
+    }
+    
+
+    @objc private func playAudioModifyButtonTapped(){
+        if (playModifyButton.titleLabel?.text == "Play modify"){
+            do{
+                playModifyButton.setTitle("Stop modify", for: .normal)
+                recordAudio.isEnabled = false
+                playAudio.isEnabled = false
+                //audioPlayer = try AVAudioPlayer(contentsOf: getDocumentsDirectory().appendingPathComponent("output.wav"))
+                audioPlayer = try AVAudioPlayer(contentsOf: getDocumentsDirectory().appendingPathComponent("output.wav"), fileTypeHint: AVFileType.wav.rawValue)
+                audioPlayer.play()
+                audioPlayer.volume = 10.0
+                audioPlayer.delegate = self
+            }
+            catch{
+                recordAudio.isEnabled = true
+                playAudio.isEnabled = true
+                let ac = UIAlertController(title: "Playback failed", message: "There was a problem; please try re-recording.", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                present(ac, animated: true)
+            }
+        }
+        else{
+            audioPlayer.stop()
+            playModifyButton.setTitle("Play modify", for: .normal)
+            recordAudio.isEnabled = true
+            playAudio.isEnabled = true
         }
     }
     
     
     @IBAction func callVoidFunc(_ sender: UIButton) {
-        cppTestWrapper().hello_world_cpp_wrapper()
+        //cppTestWrapper().hello_world_cpp_wrapper()
+        
+        //cppTestWrapper().write_file_wrapper()
+        
+        //cppTestWrapper().read_file_wrapper()
+        
+        cppTestWrapper().testLaunch_wrapper()
     }
     
     @IBAction func callIntFunc(_ sender: UIButton) {
@@ -161,14 +201,22 @@ extension ViewController: AVAudioRecorderDelegate{
 extension ViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         if(flag){
+            playAudio.setTitle("Play origin", for: .normal)
+            playModifyButton.setTitle("Play modify", for: .normal)
             recordAudio.isEnabled = true
-            playAudio.setTitle("Play audio", for: .normal)
+            playAudio.isEnabled = true
+            
         }
         else{
             let ac = UIAlertController(title: "Playback failed", message: "There was a problem; please try re-recording.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        print("FFF")
+        print(error?.localizedDescription)
     }
 }
 

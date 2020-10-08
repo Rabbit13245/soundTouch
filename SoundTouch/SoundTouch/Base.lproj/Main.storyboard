@@ -16,18 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-lm-M8v">
-                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-PI-STE">
+                                <rect key="frame" x="16" y="260.5" width="343" height="146"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-0J-Jds">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Tap to Record"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-jJ-f2X">
-                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="58" width="343" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Play audio"/>
+                                        <state key="normal" title="Play origin"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-lM-6bc">
+                                        <rect key="frame" x="0.0" y="116" width="343" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Play modify"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,23 +60,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lK7-PI-STE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3W8-Oi-Sit"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jiq-EY-EaT" secondAttribute="bottom" constant="100" id="6cK-U8-kOP"/>
-                            <constraint firstItem="Jtz-lm-M8v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7EC-OW-hB5"/>
-                            <constraint firstItem="Jtz-lm-M8v" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="D7r-D1-7Xu"/>
+                            <constraint firstItem="lK7-PI-STE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FO3-se-gPs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jiq-EY-EaT" secondAttribute="trailing" constant="16" id="JVP-sn-uCX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lK7-PI-STE" secondAttribute="trailing" constant="16" id="KMk-Hv-k4a"/>
                             <constraint firstItem="Jiq-EY-EaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tt5-KA-eZ1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jtz-lm-M8v" secondAttribute="trailing" constant="16" id="spu-NT-g0k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="playAudio" destination="W6L-jJ-f2X" id="Gqd-9n-YzC"/>
+                        <outlet property="playModifyButton" destination="rOF-lM-6bc" id="lFj-th-Vf4"/>
                         <outlet property="recordAudio" destination="iLE-0J-Jds" id="I2E-uE-9TT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
