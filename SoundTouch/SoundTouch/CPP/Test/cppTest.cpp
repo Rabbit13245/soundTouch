@@ -178,6 +178,7 @@ void process(soundtouch::SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile 
 
     if ((inFile == NULL) || (outFile == NULL)){
         std::cout << "(inFile == NULL) || (outFile == NULL)" << std::endl;
+        return;
     };  // nothing to do.
 
     nChannels = (int)inFile->getNumChannels();

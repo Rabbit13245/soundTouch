@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-PI-STE">
-                                <rect key="frame" x="16" y="260.5" width="343" height="146"/>
+                                <rect key="frame" x="16" y="231.5" width="343" height="204"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-0J-Jds">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -34,45 +33,27 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Play modify"/>
                                     </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jiq-EY-EaT">
-                                <rect key="frame" x="16" y="537" width="343" height="30"/>
-                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLE-Ep-Nxr">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="174" width="343" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Call void func"/>
-                                        <connections>
-                                            <action selector="callVoidFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2n4-vN-jhF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-KI-4Dn">
-                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Call int func"/>
-                                        <connections>
-                                            <action selector="callIntFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyn-Gi-t66"/>
-                                        </connections>
+                                        <state key="normal" title="Process audio"/>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lK7-PI-STE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3W8-Oi-Sit"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jiq-EY-EaT" secondAttribute="bottom" constant="100" id="6cK-U8-kOP"/>
                             <constraint firstItem="lK7-PI-STE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FO3-se-gPs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jiq-EY-EaT" secondAttribute="trailing" constant="16" id="JVP-sn-uCX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lK7-PI-STE" secondAttribute="trailing" constant="16" id="KMk-Hv-k4a"/>
-                            <constraint firstItem="Jiq-EY-EaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tt5-KA-eZ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="playAudio" destination="W6L-jJ-f2X" id="Gqd-9n-YzC"/>
-                        <outlet property="playModifyButton" destination="rOF-lM-6bc" id="lFj-th-Vf4"/>
-                        <outlet property="recordAudio" destination="iLE-0J-Jds" id="I2E-uE-9TT"/>
+                        <outlet property="playModifyAudioButton" destination="rOF-lM-6bc" id="lFj-th-Vf4"/>
+                        <outlet property="playOriginAudioButton" destination="W6L-jJ-f2X" id="Gqd-9n-YzC"/>
+                        <outlet property="processAudioButton" destination="jLE-Ep-Nxr" id="Tf7-tz-dde"/>
+                        <outlet property="recordAudioButton" destination="iLE-0J-Jds" id="I2E-uE-9TT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,7 +28,6 @@
 		84509FEC252F2B3C00045959 /* PeakFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDB252F2B3B00045959 /* PeakFinder.cpp */; };
 		84509FED252F2B3C00045959 /* FIFOSampleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDC252F2B3B00045959 /* FIFOSampleBuffer.cpp */; };
 		84509FEE252F2B3C00045959 /* FIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FDD252F2B3B00045959 /* FIRFilter.cpp */; };
-		84509FFA252F2BA100045959 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF3252F2BA000045959 /* main.cpp */; };
 		84509FFB252F2BA100045959 /* RunParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF4252F2BA000045959 /* RunParameters.cpp */; };
 		84509FFD252F2BA100045959 /* WavFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FF6252F2BA100045959 /* WavFile.cpp */; };
 		8450A006252F2CB700045959 /* soundtouch_config.h.in in Resources */ = {isa = PBXBuildFile; fileRef = 84509FFF252F2CB700045959 /* soundtouch_config.h.in */; };
@@ -71,7 +70,6 @@
 		84509FDC252F2B3B00045959 /* FIFOSampleBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIFOSampleBuffer.cpp; sourceTree = "<group>"; };
 		84509FDD252F2B3B00045959 /* FIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIRFilter.cpp; sourceTree = "<group>"; };
 		84509FF2252F2BA000045959 /* RunParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunParameters.h; sourceTree = "<group>"; };
-		84509FF3252F2BA000045959 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		84509FF4252F2BA000045959 /* RunParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RunParameters.cpp; sourceTree = "<group>"; };
 		84509FF6252F2BA100045959 /* WavFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WavFile.cpp; sourceTree = "<group>"; };
 		84509FF7252F2BA100045959 /* WavFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavFile.h; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		84509FEF252F2B7B00045959 /* SoundStretchPort */ = {
 			isa = PBXGroup;
 			children = (
-				84509FF3252F2BA000045959 /* main.cpp */,
 				84509FF4252F2BA000045959 /* RunParameters.cpp */,
 				84509FF2252F2BA000045959 /* RunParameters.h */,
 				84509FF6252F2BA100045959 /* WavFile.cpp */,
@@ -295,7 +292,6 @@
 				84509FEE252F2B3C00045959 /* FIRFilter.cpp in Sources */,
 				84509FE1252F2B3C00045959 /* RateTransposer.cpp in Sources */,
 				84509FE6252F2B3C00045959 /* InterpolateShannon.cpp in Sources */,
-				84509FFA252F2BA100045959 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
