@@ -7,10 +7,6 @@ public:
     
     int sum_cpp(int a, int b);
     
-    void write_file();
-    
-    void read_file();
-    
     void testLaunch();
 };
 

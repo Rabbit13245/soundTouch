@@ -34,48 +34,6 @@ int cppTest::sum_cpp(int a, int b){
     return a + b;
 }
 
-void cppTest::write_file(){
-    char buffer[256];
-    //HOME is the home directory of your application
-    //points to the root of your sandbox
-    strcpy(buffer,getenv("HOME"));
-    //concatenating the path string returned from HOME
-    strcat(buffer,"/Documents/record.wav");
-    
-    ofstream myfile(buffer);
-    if (myfile.is_open())
-    {
-        std::cout << "FFFF" << std::endl;
-//      myfile << "This is a line.\n";
-//      myfile << "This is another line.\n";
-      myfile.close();
-    }
-    else std::cout << "Unable to open file";
-}
-
-void cppTest::read_file(){
-    char buffer[256];
-    //HOME is the home directory of your application
-    //points to the root of your sandbox
-    strcpy(buffer,getenv("HOME"));
-    //concatenating the path string returned from HOME
-    strcat(buffer,"/Documents/myfile.txt");
-    
-    string line;
-    ifstream myfile (buffer);
-    
-    if (myfile.is_open())
-    {
-      while ( getline (myfile,line) )
-      {
-        std::cout << line << '\n';
-      }
-      myfile.close();
-    }
-
-    else cout << "Unable to open file";
-}
-
 void openFiles(WavInFile **inFile, WavOutFile **outFile, const RunParameters *params)
 {
     int bits, samplerate, channels;
@@ -170,7 +128,6 @@ void detectBPM(WavInFile *inFile, RunParameters *params)
 
 void process(soundtouch::SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile *outFile)
 {
-    std::cout<<"process"<<std::endl;
     int nSamples;
     int nChannels;
     int buffSizeSamples;
@@ -188,7 +145,6 @@ void process(soundtouch::SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile 
     // Process samples read from the input file
     while (inFile->eof() == 0)
     {
-
         int num;
 
         // Read a chunk of samples from the input file
@@ -212,7 +168,7 @@ void process(soundtouch::SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile 
             outFile->write(sampleBuffer, nSamples * nChannels);
         } while (nSamples != 0);
     }
-std::cout<<"process2"<<std::endl;
+    
     // Now the input file is processed, yet 'flush' few last samples that are
     // hiding in the SoundTouch's internal processing pipeline.
     pSoundTouch->flush();

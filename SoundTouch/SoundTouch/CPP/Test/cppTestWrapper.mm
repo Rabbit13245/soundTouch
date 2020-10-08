@@ -13,16 +13,6 @@
     return cppTest.sum_cpp(int(a),int(b));
 }
 
--(void) write_file_wrapper{
-    cppTest cppTest;
-    cppTest.write_file();
-}
-
--(void) read_file_wrapper{
-    cppTest cppTest;
-    cppTest.read_file();
-}
-
 -(void)testLaunch_wrapper{
     cppTest cppTest;
     cppTest.testLaunch();
