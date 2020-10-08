@@ -135,6 +135,19 @@ class ViewController: UIViewController {
             recordAudio.isEnabled = true
         }
     }
+    
+    
+    @IBAction func callVoidFunc(_ sender: UIButton) {
+        cppTestWrapper().hello_world_cpp_wrapper()
+    }
+    
+    @IBAction func callIntFunc(_ sender: UIButton) {
+        let result = cppTestWrapper().sum_cpp_wrapper(55, 67)
+        let ac = UIAlertController(title: "Result is \(result)", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(ac, animated: true)
+    }
+    
 }
 
 extension ViewController: AVAudioRecorderDelegate{

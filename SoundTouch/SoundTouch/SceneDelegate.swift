@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  SoundTouch
-//
-//  Created by Admin on 10/8/20.
-//  Copyright © 2020 Admin. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

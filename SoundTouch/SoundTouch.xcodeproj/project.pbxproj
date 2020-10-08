@@ -13,6 +13,8 @@
 		84509FAE252EF95100045959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84509FAC252EF95100045959 /* Main.storyboard */; };
 		84509FB0252EF95200045959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84509FAF252EF95200045959 /* Assets.xcassets */; };
 		84509FB3252EF95200045959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84509FB1252EF95200045959 /* LaunchScreen.storyboard */; };
+		84509FBD252F17D400045959 /* cppTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84509FBB252F17D400045959 /* cppTest.cpp */; };
+		84509FBF252F18FC00045959 /* cppTestWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84509FBE252F18FC00045959 /* cppTestWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		84509FAF252EF95200045959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84509FB2252EF95200045959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84509FB4252EF95200045959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84509FBA252F17D400045959 /* SoundTouch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundTouch-Bridging-Header.h"; sourceTree = "<group>"; };
+		84509FBB252F17D400045959 /* cppTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cppTest.cpp; sourceTree = "<group>"; };
+		84509FBC252F17D400045959 /* cppTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cppTest.hpp; sourceTree = "<group>"; };
+		84509FBE252F18FC00045959 /* cppTestWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = cppTestWrapper.mm; sourceTree = "<group>"; };
+		84509FC0252F193A00045959 /* cppTestWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cppTestWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,11 @@
 				84509FAF252EF95200045959 /* Assets.xcassets */,
 				84509FB1252EF95200045959 /* LaunchScreen.storyboard */,
 				84509FB4252EF95200045959 /* Info.plist */,
+				84509FBB252F17D400045959 /* cppTest.cpp */,
+				84509FBC252F17D400045959 /* cppTest.hpp */,
+				84509FBA252F17D400045959 /* SoundTouch-Bridging-Header.h */,
+				84509FBE252F18FC00045959 /* cppTestWrapper.mm */,
+				84509FC0252F193A00045959 /* cppTestWrapper.h */,
 			);
 			path = SoundTouch;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 				TargetAttributes = {
 					84509FA2252EF95100045959 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -138,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84509FBD252F17D400045959 /* cppTest.cpp in Sources */,
 				84509FAB252EF95100045959 /* ViewController.swift in Sources */,
 				84509FA7252EF95100045959 /* AppDelegate.swift in Sources */,
+				84509FBF252F18FC00045959 /* cppTestWrapper.mm in Sources */,
 				84509FA9252EF95100045959 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = URTF63URRB;
 				INFOPLIST_FILE = SoundTouch/Info.plist;
@@ -294,6 +310,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dmitriy.SoundTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundTouch/SoundTouch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -303,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = URTF63URRB;
 				INFOPLIST_FILE = SoundTouch/Info.plist;
@@ -313,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dmitriy.SoundTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SoundTouch/SoundTouch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
