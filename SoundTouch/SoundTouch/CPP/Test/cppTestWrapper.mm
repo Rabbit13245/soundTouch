@@ -18,6 +18,4 @@
     cppTest.testLaunch();
 }
 
-
 @end
-
