@@ -233,8 +233,7 @@ extension ViewController: AVAudioPlayerDelegate{
     }
     
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
-        print("FFF")
-        print(error?.localizedDescription)
+        print(error?.localizedDescription ?? "Error")
     }
 }
 

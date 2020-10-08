@@ -376,7 +376,7 @@ void BPMDetect::updateBeatPos(int process_samples)
     // detect beats
     for (int i = 0; i < skipstep; i++)
     {
-        LONG_SAMPLETYPE max = 0;
+        // LONG_SAMPLETYPE max = 0;
 
         float sum = beatcorr_ringbuff[beatcorr_ringbuffpos];
         sum -= beat_lpf.update(sum);
