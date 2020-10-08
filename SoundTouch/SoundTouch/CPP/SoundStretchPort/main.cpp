@@ -68,7 +68,7 @@ static const char _helloText[] =
     "more information.\n"
     "\n";
 
-static void openFiles(WavInFile **inFile, WavOutFile **outFile, const RunParameters *params)
+void openFiles1(WavInFile **inFile, WavOutFile **outFile, const RunParameters *params)
 {
     int bits, samplerate, channels;
 
@@ -110,7 +110,7 @@ static void openFiles(WavInFile **inFile, WavOutFile **outFile, const RunParamet
 
 // Sets the 'SoundTouch' object up according to input file sound format & 
 // command line parameters
-static void setup(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunParameters *params)
+static void setup1(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunParameters *params)
 {
     int sampleRate;
     int channels;
@@ -165,7 +165,7 @@ static void setup(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunPar
 
 
 // Processes the sound
-static void process(SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile *outFile)
+static void process1(SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile *outFile)
 {
     int nSamples;
     int nChannels;
@@ -217,7 +217,7 @@ static void process(SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile *outF
 
 
 // Detect BPM rate of inFile and adjust tempo setting accordingly if necessary
-static void detectBPM(WavInFile *inFile, RunParameters *params)
+static void detectBPM1(WavInFile *inFile, RunParameters *params)
 {
     float bpmValue;
     int nChannels;
@@ -271,7 +271,7 @@ static void detectBPM(WavInFile *inFile, RunParameters *params)
 }
 
 
-int main(const int nParams, const char * const paramStr[])
+int main1(const int nParams, const char * const paramStr[])
 {
     WavInFile *inFile;
     WavOutFile *outFile;
@@ -286,21 +286,21 @@ int main(const int nParams, const char * const paramStr[])
         params = new RunParameters(nParams, paramStr);
 
         // Open input & output files
-        openFiles(&inFile, &outFile, params);
+        openFiles1(&inFile, &outFile, params);
 
         if (params->detectBPM == true)
         {
             // detect sound BPM (and adjust processing parameters
             //  accordingly if necessary)
-            detectBPM(inFile, params);
+            detectBPM1(inFile, params);
         }
 
         // Setup the 'SoundTouch' object for processing the sound
-        setup(&soundTouch, inFile, params);
+        setup1(&soundTouch, inFile, params);
 
         // clock_t cs = clock();    // for benchmarking processing duration
         // Process the sound
-        process(&soundTouch, inFile, outFile);
+        process1(&soundTouch, inFile, outFile);
         // clock_t ce = clock();    // for benchmarking processing duration
         // printf("duration: %lf\n", (double)(ce-cs)/CLOCKS_PER_SEC);
 
