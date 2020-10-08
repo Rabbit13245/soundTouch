@@ -8,11 +8,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var playModifyAudioButton: UIButton!
     @IBOutlet weak var processAudioButton: UIButton!
     
+    @IBOutlet weak var pitchTextField: UITextField!
+    
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
     
     var wasModified: Bool = false
+    var pitchDelta: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,19 @@ class ViewController: UIViewController {
         setup()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     private func setupUI(){
         self.view.backgroundColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
         recordAudioButton.isEnabled = false
         playOriginAudioButton.isEnabled = false
         playModifyAudioButton.isEnabled = false
         processAudioButton.isEnabled = false
+        
+        pitchTextField.delegate = self
+        pitchTextField.addTarget(self, action: #selector(textFieldFilter), for: .editingChanged)
     }
     
     private func setup(){
@@ -115,6 +125,8 @@ class ViewController: UIViewController {
         return paths[0]
     }
     
+    // MARK: - Tapped functions
+    
     @objc private func recordAudioButtonTapped(){
         if (audioRecorder == nil){
             startRecording()
@@ -195,7 +207,7 @@ class ViewController: UIViewController {
         playModifyAudioButton.isEnabled = false
         processAudioButton.isEnabled = false
         
-        cppTestWrapper().testLaunch_wrapper()
+        cppTestWrapper().testLaunch_wrapper(self.pitchDelta)
         
         wasModified = true
         
@@ -204,7 +216,27 @@ class ViewController: UIViewController {
         playModifyAudioButton.isEnabled = wasModified
         processAudioButton.isEnabled = true
     }
+    
+    // MARK: - TextFieldInput
+    @objc private func textFieldFilter(_ textField: UITextField){
+        if let text = textField.text{
+            if text != "-",
+            let intText = Int(text),
+                intText <= 60,
+                intText >= -60
+            {
+                textField.text = "\(intText)"
+                self.pitchDelta = intText
+            }
+        }
+        else{
+            textField.text = ""
+            self.pitchDelta = 0
+        }
+    }
 }
+
+// MARK: - AVAudioRecorderDelegate
 
 extension ViewController: AVAudioRecorderDelegate{
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -213,6 +245,8 @@ extension ViewController: AVAudioRecorderDelegate{
         }
     }
 }
+
+// MARK: - AVAudioPlayerDelegate
 
 extension ViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -237,4 +271,12 @@ extension ViewController: AVAudioPlayerDelegate{
     }
 }
 
+// MARK: - UITextFieldDelegate
 
+extension ViewController : UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789-").inverted
+        
+        return (string.rangeOfCharacter(from: invalidCharacters) == nil)
+    }
+}

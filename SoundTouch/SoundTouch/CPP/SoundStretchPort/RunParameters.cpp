@@ -94,11 +94,11 @@ static int _toLowerCase(int c)
     return c;
 }
 
-RunParameters::RunParameters(char inputFile[256], char outputFile[256]){
+RunParameters::RunParameters(char inputFile[256], char outputFile[256], int pitch){
     inFileName = inputFile;
     outFileName = outputFile;
     tempoDelta = 0;
-    pitchDelta = 5;
+    pitchDelta = pitch;
     rateDelta = 0;
     quick = 0;
     noAntiAlias = 0;

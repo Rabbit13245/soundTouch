@@ -7,7 +7,7 @@ public:
     
     int sum_cpp(int a, int b);
     
-    void testLaunch();
+    void testLaunch(int pitchDelta);
 };
 
 #endif /* cppTest_hpp */

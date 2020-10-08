@@ -13,9 +13,9 @@
     return cppTest.sum_cpp(int(a),int(b));
 }
 
--(void)testLaunch_wrapper{
+-(void) testLaunch_wrapper: (NSInteger) pitchDelta{
     cppTest cppTest;
-    cppTest.testLaunch();
+    cppTest.testLaunch(int(pitchDelta));
 }
 
 @end

@@ -181,6 +181,8 @@ void process(soundtouch::SoundTouch *pSoundTouch, WavInFile *inFile, WavOutFile 
 
 void setup(soundtouch::SoundTouch *pSoundTouch, const WavInFile *inFile, const RunParameters *params)
 {
+    std::cout << params->pitchDelta << std::endl;
+    
     int sampleRate;
     int channels;
 
@@ -232,7 +234,7 @@ void setup(soundtouch::SoundTouch *pSoundTouch, const WavInFile *inFile, const R
     fflush(stderr);
 }
 
-void cppTest::testLaunch(){
+void cppTest::testLaunch(int pitchDelta){
     WavInFile *inFile;
     WavOutFile *outFile;
     RunParameters *params;
@@ -249,7 +251,7 @@ void cppTest::testLaunch(){
     //concatenating the path string returned from HOME
     strcat(output,"/Documents/output.wav");
     
-    params = new RunParameters(input, output);
+    params = new RunParameters(input, output, pitchDelta);
     
     // Open input & output files
     openFiles(&inFile, &outFile, params);

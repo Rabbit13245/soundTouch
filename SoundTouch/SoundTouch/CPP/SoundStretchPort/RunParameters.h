@@ -60,7 +60,7 @@ public:
     bool  speech;
 
     RunParameters(const int nParams, const char * const paramStr[]);
-    RunParameters(char inputFile[256], char outputFile[256]);
+    RunParameters(char inputFile[256], char outputFile[256], int pitch);
 };
 
 #endif

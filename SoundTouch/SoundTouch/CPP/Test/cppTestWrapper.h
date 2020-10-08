@@ -7,7 +7,7 @@
 
 -(void) hello_world_cpp_wrapper;
 -(int) sum_cpp_wrapper: (NSUInteger) a : (NSUInteger) b;
--(void) testLaunch_wrapper;
+-(void) testLaunch_wrapper: (NSInteger) pitchDelta;
 
 @end
 
